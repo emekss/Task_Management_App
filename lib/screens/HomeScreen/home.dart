@@ -4,6 +4,8 @@ import 'package:task_management_app/components/nav_tab.dart';
 import 'package:task_management_app/components/progress_cont.dart';
 import 'package:task_management_app/components/task_card.dart';
 
+import '../../models/splash_data.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -13,23 +15,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentPage = 0;
-  List<Map<String, String>> splashData = [
-    {
-      "project": "Project 0.1",
-      "projectTitle": "UI/UX \nDesigning",
-      "date": "October 4, 2024",
-    },
-    {
-      "project": "Project 2.0",
-      "projectTitle": "Frontend \nDevelopment",
-      "date": "August 10, 2024",
-    },
-    {
-      "project": "Project 3.0",
-      "projectTitle": "Backend \nDevelopment",
-      "date": "May 4, 2024",
-    },
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +27,10 @@ class _HomeScreenState extends State<HomeScreen> {
           icon: const Icon(Icons.menu_rounded),
         ),
         actions: [
-          Image.asset('assets/images/account_circle.png'),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset('assets/images/account_circle.png'),
+          ),
         ],
       ),
       body: Padding(
@@ -125,7 +114,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: const Color.fromARGB(255, 46, 58, 89),
               ),
             ),
-            const ProgressCont(),
+            Expanded(
+              child: ListView.builder(
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    return const ProgressCont();
+                  }),
+            )
           ],
         ),
       ),

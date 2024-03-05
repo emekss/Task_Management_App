@@ -6,15 +6,17 @@ class ToDoListIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 33.05,
-      width: 32.94,
+      height: 40.05,
+      width: 37.94,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           gradient: const LinearGradient(colors: [
             Color.fromARGB(255, 156, 44, 243),
             Color.fromARGB(255, 58, 73, 249),
           ])),
-      child: Image.asset('assets/images/todolist_icon.png'),
+      child: Image.asset(
+        'assets/images/todolist_icon.png',
+      ),
     );
   }
 }
