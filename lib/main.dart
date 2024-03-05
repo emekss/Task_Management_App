@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task_management_app/screens/home.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:task_management_app/screens/HomeScreen/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
+      ),
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
