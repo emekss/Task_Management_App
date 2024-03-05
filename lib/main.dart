@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:task_management_app/screens/Calender_Screen/calender_screen.dart';
 import 'package:task_management_app/screens/HomeScreen/home.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: const CalenderScreen(),
     );
   }
 }
