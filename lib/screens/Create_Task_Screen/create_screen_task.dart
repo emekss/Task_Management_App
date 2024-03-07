@@ -39,7 +39,7 @@ class CreateTaskScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height,
+            height: 400,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -48,16 +48,29 @@ class CreateTaskScreen extends StatelessWidget {
                 ],
               ),
             ),
-            child: Column(
+            child: const Column(
               children: [
-                TextFormField(
-                  decoration: const InputDecoration(
+                TextField(
+                  decoration: InputDecoration(
                     labelText: 'Name',
+                    labelStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Date',
+                    labelStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600),
                   ),
                 )
               ],
             ),
-          )
+          ),
         ],
       ),
     );
