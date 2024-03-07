@@ -1,6 +1,6 @@
 List<Map<String, String>> splashData = [
   {
-    "project": "Project 0.1",
+    "project": "Project 1.0",
     "projectTitle": "UI/UX \nDesigning",
     "date": "October 4, 2024",
   },
