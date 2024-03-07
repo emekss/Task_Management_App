@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:task_management_app/components/nav_tab.dart';
 import 'package:task_management_app/components/progress_cont.dart';
 import 'package:task_management_app/components/task_card.dart';
-
+import 'package:task_management_app/screens/HomeScreen/splash_screen.dart';
 import '../../models/splash_data.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -62,54 +62,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 NavTab(navTitle: 'Completed'),
               ],
             ),
-            SizedBox(
-              height: 325.84,
-              width: 328.39,
-              child: PageView.builder(
-                onPageChanged: (value) {
-                  setState(() {
-                    currentPage = value;
-                  });
-                },
-                itemCount: splashData.length,
-                itemBuilder: (context, index) => TaskCard(
-                  date: splashData[index]['date'],
-                  project: splashData[index]['project'],
-                  projectTitle: splashData[index]['projectTitle'],
-                ),
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  child: Column(children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: List.generate(
-                        splashData.length,
-                        (index) => AnimatedContainer(
-                          duration: const Duration(seconds: 1),
-                          margin: const EdgeInsets.only(right: 5),
-                          height: 6,
-                          width: currentPage == index ? 20 : 6,
-                          decoration: BoxDecoration(
-                            color: currentPage == index
-                                ? const Color.fromARGB(255, 156, 44, 243)
-                                : Colors.grey,
-                            borderRadius: BorderRadius.circular(3),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ]),
-                ),
-              ],
-            ),
+            const SplashScreen(),
             Text(
               'Progress',
               style: GoogleFonts.poppins(
-                fontSize: 17.31,
+                fontSize: 24.96,
                 fontWeight: FontWeight.w600,
                 color: const Color.fromARGB(255, 46, 58, 89),
               ),
