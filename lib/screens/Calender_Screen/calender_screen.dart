@@ -9,7 +9,9 @@ class CalenderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 242, 245, 255),
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 242, 245, 255),
         leading: const Icon(Icons.arrow_back_ios_new_rounded),
         actions: const [Icon(Icons.search_rounded)],
       ),
