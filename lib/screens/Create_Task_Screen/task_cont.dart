@@ -10,14 +10,10 @@ class TaskCont extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Container(
-        height: 500,
+        height: 200,
         width: MediaQuery.of(context).size.width,
         decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
-          ),
-        ),
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(40))),
         child: Column(
           children: [
             Row(
@@ -29,7 +25,7 @@ class TaskCont extends StatelessWidget {
                     fontSize: 17.49,
                   ),
                 ),
-                SizedBox(width: 0),
+                const SizedBox(width: 50),
                 Text(
                   'End time',
                   style: GoogleFonts.poppins(
@@ -48,7 +44,7 @@ class TaskCont extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(width: 30),
+                const SizedBox(width: 30),
                 Text(
                   '03:20 pm',
                   style: GoogleFonts.poppins(
@@ -58,12 +54,12 @@ class TaskCont extends StatelessWidget {
                 ),
               ],
             ),
-            Divider(),
-            Text('Description'),
-            Text(
+            const Divider(),
+            const Text('Description'\),
+            const Text(
                 'Lorem ipsum dolor sit amet, er adipiscing elit, sed dianummy nibh euismod  dolor sit amet, er adipiscing elit, sed dianummy nibh euismod.'),
-            Divider(),
-            Text('Category')
+            const Divider(),
+            const Text('Category')
           ],
         ),
       ),

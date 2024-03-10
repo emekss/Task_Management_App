@@ -38,45 +38,46 @@ class CreateTaskScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
+      body: Stack(
         children: [
-          Container(
-            height: 250,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromARGB(255, 156, 44, 243),
-                  Color.fromARGB(255, 58, 73, 249),
-                ],
+          Column(
+            children: [
+              Container(
+                height: 200,
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(255, 156, 44, 243),
+                      Color.fromARGB(255, 58, 73, 249),
+                    ],
+                  ),
+                ),
+                child: const Column(
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Name',
+                        labelStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Date',
+                        labelStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            child: const Column(
-              children: [
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Name',
-                    labelStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Date',
-                    labelStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
-              ],
-            ),
+              const TaskCont(),
+            ],
           ),
-          const Positioned(
-            top: 20,
-            child: TaskCont(),
-          )
         ],
       ),
     );
