@@ -43,7 +43,7 @@ class CreateTaskScreen extends StatelessWidget {
           Column(
             children: [
               Container(
-                height: 200,
+                height: MediaQuery.of(context).size.height,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
@@ -72,10 +72,10 @@ class CreateTaskScreen extends StatelessWidget {
                             fontWeight: FontWeight.w600),
                       ),
                     ),
+                    const TaskCont(),
                   ],
                 ),
               ),
-              const TaskCont(),
             ],
           ),
         ],

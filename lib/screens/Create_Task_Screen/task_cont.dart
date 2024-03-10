@@ -7,14 +7,20 @@ class TaskCont extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Container(
-        height: 200,
-        width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(40))),
+    return Container(
+      height: 500,
+      width: MediaQuery.of(context).size.width,
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+        color: Colors.white,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
@@ -55,11 +61,23 @@ class TaskCont extends StatelessWidget {
               ],
             ),
             const Divider(),
-            const Text('Description'\),
+            Text(
+              'Description',
+              style: GoogleFonts.poppins(
+                color: Colors.grey,
+                fontSize: 17.49,
+              ),
+            ),
             const Text(
                 'Lorem ipsum dolor sit amet, er adipiscing elit, sed dianummy nibh euismod  dolor sit amet, er adipiscing elit, sed dianummy nibh euismod.'),
             const Divider(),
-            const Text('Category')
+            Text(
+              'Category',
+              style: GoogleFonts.poppins(
+                color: Colors.grey,
+                fontSize: 17.49,
+              ),
+            )
           ],
         ),
       ),
