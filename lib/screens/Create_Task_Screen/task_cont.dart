@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TaskCont extends StatelessWidget {
@@ -20,6 +20,7 @@ class TaskCont extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
@@ -68,8 +69,13 @@ class TaskCont extends StatelessWidget {
                 fontSize: 17.49,
               ),
             ),
-            const Text(
-                'Lorem ipsum dolor sit amet, er adipiscing elit, sed dianummy nibh euismod  dolor sit amet, er adipiscing elit, sed dianummy nibh euismod.'),
+            Text(
+              'Lorem ipsum dolor sit amet, er adipiscing elit, sed dianummy nibh euismod  dolor sit amet, er adipiscing elit, sed dianummy nibh euismod.',
+              style: GoogleFonts.poppins(
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
             const Divider(),
             Text(
               'Category',

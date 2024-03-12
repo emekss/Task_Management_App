@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_management_app/screens/Create_Task_Screen/task_cont.dart';
 
@@ -43,7 +42,6 @@ class CreateTaskScreen extends StatelessWidget {
           Column(
             children: [
               Container(
-                height: MediaQuery.of(context).size.height,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
@@ -72,7 +70,7 @@ class CreateTaskScreen extends StatelessWidget {
                             fontWeight: FontWeight.w600),
                       ),
                     ),
-                    const TaskCont(),
+                    TaskCont(),
                   ],
                 ),
               ),
