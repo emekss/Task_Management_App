@@ -14,14 +14,14 @@ class TaskGrey extends StatelessWidget {
         height: 54,
         width: 118,
         decoration: BoxDecoration(
-          color: Colors.grey[300],
+          color: const Color.fromARGB(255, 229, 234, 252),
           borderRadius: BorderRadius.circular(58.5),
         ),
         child: Center(
           child: Text(
             taskName,
             style: GoogleFonts.poppins(
-              color: Colors.black,
+              color: const Color.fromARGB(255, 46, 58, 89),
               fontSize: 15,
               fontWeight: FontWeight.w600,
             ),
