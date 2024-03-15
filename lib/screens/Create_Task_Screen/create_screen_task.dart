@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_management_app/screens/Create_Task_Screen/task_cont.dart';
 
+import '../../components/create_task_button.dart';
+
 class CreateTaskScreen extends StatelessWidget {
   const CreateTaskScreen({super.key});
 
@@ -77,6 +79,10 @@ class CreateTaskScreen extends StatelessWidget {
             ],
           ),
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: CreateTaskButton(),
       ),
     );
   }

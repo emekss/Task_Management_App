@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:task_management_app/components/create_task_button.dart';
 import 'package:task_management_app/components/task.dart';
 
 class TaskCont extends StatelessWidget {
@@ -9,7 +8,7 @@ class TaskCont extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 600,
+      height: 550,
       width: MediaQuery.of(context).size.width,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -21,6 +20,7 @@ class TaskCont extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
@@ -84,26 +84,32 @@ class TaskCont extends StatelessWidget {
                 fontSize: 17.49,
               ),
             ),
-            const Row(
+            const Column(
               children: [
-                Task(),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Task(),
+                      Task(),
+                      Task(),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Task(),
+                      Task(),
+                      Task(),
+                    ],
+                  ),
+                ),
               ],
             ),
-            SizedBox(
-              height: 60,
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3),
-                itemCount: 6,
-                itemBuilder: (BuildContext context, int index) {
-                  return const Padding(
-                    padding: EdgeInsets.all(20.0),
-                    child: Task(),
-                  );
-                },
-              ),
-            ),
-            const CreateTaskButton()
           ],
         ),
       ),
