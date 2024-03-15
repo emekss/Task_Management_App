@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:task_management_app/components/create_task_button.dart';
+import 'package:task_management_app/components/task.dart';
 
 class TaskCont extends StatelessWidget {
   const TaskCont({super.key});
@@ -20,7 +21,6 @@ class TaskCont extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
@@ -83,7 +83,27 @@ class TaskCont extends StatelessWidget {
                 color: Colors.grey,
                 fontSize: 17.49,
               ),
-            )
+            ),
+            const Row(
+              children: [
+                Task(),
+              ],
+            ),
+            SizedBox(
+              height: 60,
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3),
+                itemCount: 6,
+                itemBuilder: (BuildContext context, int index) {
+                  return const Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: Task(),
+                  );
+                },
+              ),
+            ),
+            const CreateTaskButton()
           ],
         ),
       ),
