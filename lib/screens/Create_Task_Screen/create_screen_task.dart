@@ -52,27 +52,36 @@ class CreateTaskScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                child: const Column(
+                child: Column(
                   children: [
-                    TextField(
-                      decoration: InputDecoration(
-                        labelText: 'Name',
-                        labelStyle: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Container(
+                        child: const Column(
+                          children: [
+                            TextField(
+                              decoration: InputDecoration(
+                                labelText: 'Name',
+                                labelStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                labelText: 'Date',
+                                labelStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    TextField(
-                      decoration: InputDecoration(
-                        labelText: 'Date',
-                        labelStyle: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ),
-                    TaskCont(),
+                    const TaskCont(),
                   ],
                 ),
               ),
@@ -80,8 +89,8 @@ class CreateTaskScreen extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(20.0),
+      bottomNavigationBar: const Padding(
+        padding: EdgeInsets.all(20.0),
         child: CreateTaskButton(),
       ),
     );
