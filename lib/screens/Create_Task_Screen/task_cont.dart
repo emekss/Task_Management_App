@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_management_app/components/task.dart';
+import 'package:task_management_app/components/task_grey.dart';
 
 class TaskCont extends StatelessWidget {
   const TaskCont({super.key});
@@ -87,24 +88,34 @@ class TaskCont extends StatelessWidget {
             const Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(5.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Task(),
-                      Task(),
-                      Task(),
+                      TaskGrey(
+                        taskName: 'Meeting',
+                      ),
+                      TaskGrey(
+                        taskName: 'Quick Call',
+                      ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(5.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Task(),
-                      Task(),
-                      Task(),
+                      TaskGrey(
+                        taskName: 'Coding',
+                      ),
+                      TaskGrey(
+                        taskName: 'BDE',
+                      ),
+                      TaskGrey(
+                        taskName: 'Testing',
+                      ),
                     ],
                   ),
                 ),

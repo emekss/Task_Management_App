@@ -1,31 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Task extends StatelessWidget {
-  const Task({super.key});
+class TaskGrey extends StatelessWidget {
+  final String taskName;
+  const TaskGrey({super.key, required this.taskName});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 2,
+      elevation: 1,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(58.5)),
       child: Container(
         height: 54,
-        width: 111,
+        width: 118,
         decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            colors: [
-              Color.fromARGB(255, 156, 44, 243),
-              Color.fromARGB(255, 58, 73, 249),
-            ],
-          ),
+          color: Colors.grey[300],
           borderRadius: BorderRadius.circular(58.5),
         ),
         child: Center(
           child: Text(
-            'Design',
+            taskName,
             style: GoogleFonts.poppins(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 15,
               fontWeight: FontWeight.w600,
             ),
